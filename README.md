@@ -1,1 +1,1 @@
-This is supposed to be personal blog
+This is supposed to be personal blog.

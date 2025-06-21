@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 126, "column": 0}, "map": {"version":3,"sources":["file:///home/lukasz/personal-blog/personal-blog/src/app/blog/page.tsx"],"sourcesContent":["import fs from 'fs/promises';\nimport path from 'path';\nimport matter from 'gray-matter';\nimport ReactMarkdown from 'react-markdown';\n\nexport default async function Post() {\n  const filePath = path.join(process.cwd(), 'posts', 'article.md');\n  const fileContents = await fs.readFile(filePath, 'utf8');\n  const { content } = matter(fileContents);\n\n  return (\n    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>\n      <ReactMarkdown>{content}</ReactMarkdown>\n    </div>\n  );\n}"],"names":[],"mappings":";;;;AAAA;AACA;AACA;AACA;;;;;;AAEe,eAAe;IAC5B,MAAM,WAAW,iGAAA,CAAA,UAAI,CAAC,IAAI,CAAC,QAAQ,GAAG,IAAI,SAAS;IACnD,MAAM,eAAe,MAAM,qHAAA,CAAA,UAAE,CAAC,QAAQ,CAAC,UAAU;IACjD,MAAM,EAAE,OAAO,EAAE,GAAG,CAAA,GAAA,uIAAA,CAAA,UAAM,AAAD,EAAE;IAE3B,qBACE,8OAAC;QAAI,OAAO;YAAE,UAAU;YAAS,QAAQ;YAAU,SAAS;QAAO;kBACjE,cAAA,8OAAC,wLAAA,CAAA,UAAa;sBAAE;;;;;;;;;;;AAGtB","debugId":null}}]
+}
